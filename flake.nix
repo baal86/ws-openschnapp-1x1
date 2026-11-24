@@ -66,6 +66,7 @@
 
               xschem
               ngspice
+              xterm
             ];
 
             extra-python-packages =

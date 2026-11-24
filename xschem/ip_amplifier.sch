@@ -84,22 +84,11 @@ N 460 -600 460 -550 {lab=VDD}
 N 360 -520 420 -520 {lab=PBIAS}
 N 460 -490 460 -430 {lab=#net8}
 N 460 -430 460 -300 {lab=#net8}
-N 790 -20 1020 -20 {lab=COMP}
-N 610 270 690 270 {lab=OUTP}
-N 630 -20 700 -20 {lab=COMP}
-N 610 -20 630 -20 {lab=COMP}
-N 700 -20 790 -20 {lab=COMP}
-N 690 270 770 270 {lab=OUTP}
-N 770 270 900 270 {lab=OUTP}
-N 880 -20 880 30 {lab=COMP}
-N 880 250 880 270 {lab=OUTP}
 N -390 -320 -390 -120 {lab=#net7}
 N -410 -170 -410 -80 {lab=vsubs}
-N 900 270 1020 270 {lab=OUTP}
-N 880 40 880 90 {lab=COMP}
-N 880 30 880 40 {lab=COMP}
-N 880 160 880 250 {lab=OUTP}
-N 880 150 880 160 {lab=OUTP}
+N 380 140 380 180 {lab=COMP}
+N 380 60 380 80 {lab=OUTP}
+N 380 60 460 60 {lab=OUTP}
 C {iopin.sym} -430 -640 2 0 {name=p8 lab=VDD}
 C {iopin.sym} -450 400 2 0 {name=p9 lab=VSUBS}
 C {ipin.sym} -70 -20 0 0 {name=p6 lab=INP}
@@ -326,17 +315,15 @@ m=1}
 C {ammeter.sym} -390 -420 0 0 {name=Vmeas savecurrent=false spice_ignore=0}
 C {ammeter.sym} -250 100 0 0 {name=Vmeas1 savecurrent=false spice_ignore=0}
 C {ngspice_probe.sym} 460 -90 0 0 {name=r10}
-C {lab_wire.sym} 660 270 0 0 {name=p5 sig_type=std_logic lab=OUTP}
 C {lab_wire.sym} -330 120 0 0 {name=p12 sig_type=std_logic lab=NBIAS}
 C {lab_wire.sym} 50 -410 0 0 {name=p13 sig_type=std_logic lab=COMMON}
 C {ammeter.sym} 110 -280 0 0 {name=Vmeas2 savecurrent=false spice_ignore=0}
 C {lab_wire.sym} 330 180 0 0 {name=p2 sig_type=std_logic lab=COMP}
-C {lab_wire.sym} 660 -20 0 0 {name=p4 sig_type=std_logic lab=COMP}
 C {ammeter.sym} 460 -270 0 0 {name=Vmeas3 savecurrent=false spice_ignore=0}
 C {lab_wire.sym} -410 -150 3 0 {name=p1 sig_type=std_logic lab=vsubs}
 C {lab_wire.sym} 100 -520 0 0 {name=p15 sig_type=std_logic lab=PBIAS}
 C {lab_wire.sym} 80 -180 0 0 {name=p16 sig_type=std_logic lab=COMMON_}
-C {symbols/cap_mim_analog.sym} 880 120 0 0 {name=C1
+C {symbols/cap_mim_analog.sym} 380 110 0 0 {name=C1
 W=10e-6
 L=10e-6
 model=cap_mim_2f0_m2m3_noshield

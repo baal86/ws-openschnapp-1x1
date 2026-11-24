@@ -63,6 +63,9 @@
               # Waveform viewing
               gtkwave
               surfer
+
+              xschem
+              ngspice
             ];
 
             extra-python-packages =

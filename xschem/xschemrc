@@ -1,0 +1,14 @@
+# Resolve PDK_ROOT from environment, or fall back to ../gf180mcu relative to this file
+if {![info exists env(PDK_ROOT)]} {
+    set env(PDK_ROOT) [file normalize [file join [file dirname [info script]] .. gf180mcu]]
+}
+
+if {![info exists env(PDK)]} {
+    set env(PDK) gf180mcuD
+}
+
+# Source the GF180MCU Xschem startup script
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
+
+# Append your local design folder so Xschem finds your custom symbols/schematics
+append XSCHEM_LIBRARY_PATH :[file dirname [file normalize [info script]]]

@@ -10,3 +10,4 @@ generated_defines.svh
 analog/xschem/simulation/
 analog/mag/*txt
 analog/mag/*.spice
+analog/mag/*.lvs.report

@@ -37,7 +37,7 @@ $(PROJECT_NAME).gds.lvs.spice: ../gds/$(PROJECT_NAME).gds
 	mv ../gds/$(PROJECT_NAME).gds.lvs.spice .
 	rm -f *.ext
 
-%.lvs.report: %.lvs.spice ../src/project.v
+%.lvs.report: %.lvs.spice
 	netgen -batch eval "set project $* ; source tcl/lvs_netgen.tcl"
 	mv lvs.report $@
 	./tcl/check_lvs_report.sh $@

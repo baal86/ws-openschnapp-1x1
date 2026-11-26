@@ -1,0 +1,5 @@
+| units: 0.5 tech: gf180mcuD format: MIT
+x a_300_199# a_0_n1# s=350000,7200 l=5700 w=3500 x=300 y=299 cap_nmos_03v3
+C a_300_199#0 46.5
+R a_300_199# 21
+R a_0_n1# 1883

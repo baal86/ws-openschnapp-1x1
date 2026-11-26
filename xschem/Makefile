@@ -1,0 +1,99 @@
+IP_FILES     := $(wildcard ip_*.sch)
+LVS_FILES    := $(IP_FILES:%.sch=lvs/%.lvs.spice)
+DOC_FILES    := $(IP_FILES:%.sch=docs/%.png)
+PARAX_FILES  := $(IP_FILES:%.sch=parax/%.sim.spice)
+
+TB_FILES     := $(wildcard tb_*.sch)
+SPICE_FILES  := $(TB_FILES:%.sch=simulation/%.spice)
+RAW_FILES    := $(TB_FILES:%.sch=simulation/%.raw)
+HTML_FILES   := $(TB_FILES:%.sch=test/%.html)
+
+.PHONY: cleansim cleanlvs cleanparax
+
+###################################################################################
+## LVS Netlist Generation
+###################################################################################
+
+cleanlvs:
+	rm -f $(LVS_FILES)
+
+lvs: $(LVS_FILES)
+	sed -i "s/area='13.5u \* 13.5u '/area=0.16125n/" lvs/ip_pixel_nd2ps.lvs.spice
+	cp lvs/ip_pixel_nd2ps.lvs.spice lvs/ip_pixel_nd2ps_dummy.lvs.spice
+	sed -i 's/ip_pixel_nd2ps/ip_pixel_nd2ps_dummy/g' lvs/ip_pixel_nd2ps_dummy.lvs.spice
+
+lvs/%.lvs.spice: %.sch
+	xschem -x -q $< --command "set lvs_netlist 0; set top_is_subckt 1; xschem netlist -file $*.lvs.spice"
+	mv simulation/$*.lvs.spice lvs/$*.lvs.spice
+
+###################################################################################
+## Parax Simulation Generation
+###################################################################################
+
+cleanparax:
+	rm -f ./parax/*.spice
+	rm -f ./parax/*.sim
+
+parax: $(PARAX_FILES)
+
+parax/%.sim.spice: ../mag/%.mag
+	cd ../mag && magic -noconsole -dnull tcl/extract_for_sim.tcl $*
+	cd ../mag && rm -f $*.ext
+	mv ../mag/$*.sim.spice ./parax
+	mv ../mag/$*_parax.sim ./parax
+	rm -f ../mag/$*_parax.res.ext
+	rm -f ../mag/$*_parax.ext
+	rm -f ../mag/$*_parax.nodes
+
+###################################################################################
+## Simulation and Test Generation
+###################################################################################
+
+simulation/%.spice: %.sch parax
+	xschem -x -q $< --command "set lvs_netlist 0; set top_is_subckt 0; xschem netlist -file $*.spice"
+
+simulation/tb_total_tran.spice: tb_total_tran.sch parax
+	python test/gen_pixel_array.py
+	xschem -x -q tb_total_tran.sch --command "set lvs_netlist 0; set top_is_subckt 0; xschem netlist -file tb_total_tran.spice"
+
+simulation/%.raw: simulation/%.spice
+	cd simulation && ngspice -b -r $(notdir $@) $(notdir $<)
+
+test: $(HTML_FILES)
+
+test/%.html: simulation/%.raw
+	pip install pytest-html
+	cd test && pytest $*.py --html=$(notdir $@) --self-contained-html --tb=no
+	cp test/$*.png docs/
+
+test/tb_column_mux_timing.html: simulation/tb_column_mux_timing.raw
+	xschem -q tb_column_mux_timing.sch --command "xschem raw_read simulation/tb_column_mux_timing.raw; xschem print png docs/tb_column_mux_timing.png 900 600 320 -180 1220 420"
+	touch test/tb_column_mux_timing.html
+
+test/tb_row_mux_timing.html: simulation/tb_row_mux_timing.raw
+	xschem -q tb_row_mux_timing.sch --command "xschem raw_read simulation/tb_row_mux_timing.raw; xschem print png docs/tb_row_mux_timing.png 900 600 800 -740 1700 -140"
+	touch test/tb_row_mux_timing.html
+
+test/tb_total_tran.html: simulation/tb_total_tran.raw
+	xschem -q tb_total_tran.sch --command "xschem raw_read simulation/tb_total_tran.raw; xschem print png docs/tb_total_tran.a.png 900 450 -1950 120 -1150 520; xschem print png docs/tb_total_tran.b.png 900 450 -1950 550 -1150 950"
+	pip install pytest-html
+	cd test && pytest tb_total_tran.py --html=tb_total_tran.html --self-contained-html --tb=no
+	cp test/tb_total_tran.png docs/
+
+cleansim:
+	rm -f $(RAW_FILES)
+	rm -f $(SPICE_FILES)
+	rm -f test/*.html
+	rm -f test/*.png
+
+###################################################################################
+## Documentation Picture Generation
+###################################################################################
+
+cleandocs:
+	rm -f docs/ip*.png
+
+docs: $(DOC_FILES)
+
+docs/%.png: %.sch
+	xschem -q $< --command "xschem zoom_full; xschem print png docs/$*.png"

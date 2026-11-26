@@ -1,0 +1,68 @@
+magic
+tech gf180mcuD
+timestamp 1790325955
+<< pwell >>
+rect -18 250 162 280
+rect -18 248 138 250
+rect 148 248 162 250
+rect -18 6 162 248
+rect -18 4 138 6
+rect 148 4 162 6
+rect -18 0 162 4
+rect -18 -2 134 0
+rect 144 -2 162 0
+rect -18 -8 162 -2
+rect -20 -20 162 -8
+<< mvpsubdiff >>
+rect -20 270 160 280
+rect -20 -20 -10 270
+<< metal1 >>
+rect -20 -20 -18 280
+<< via1 >>
+rect 42 22 78 38
+<< metal2 >>
+rect -20 46 160 280
+rect -20 14 34 46
+rect 40 38 80 40
+rect 40 22 42 38
+rect 78 22 80 38
+rect 40 20 80 22
+rect 86 14 160 46
+rect -20 -2 160 14
+rect -20 -18 -18 -2
+rect 18 -18 160 -2
+rect -20 -20 160 -18
+<< via2 >>
+rect 42 22 78 38
+rect -18 -18 18 -2
+<< metal3 >>
+rect 40 38 80 40
+rect 40 22 42 38
+rect 78 22 80 38
+rect 40 20 80 22
+rect -20 -2 20 0
+rect -20 -18 -18 -2
+rect 18 -18 20 -2
+rect -20 -20 20 -18
+<< via3 >>
+rect 42 22 78 38
+rect -18 -18 18 -2
+<< metal4 >>
+rect 40 38 80 40
+rect 40 22 42 38
+rect 78 22 80 38
+rect 40 20 80 22
+rect -20 -2 20 0
+rect -20 -18 -18 -2
+rect 18 -18 20 -2
+rect -20 -20 20 -18
+use nmoscap_3p3_CUSTM1  nmoscap_3p3_CUSTM1_0
+timestamp 1790325955
+transform 1 0 320 0 1 60
+box -340 -80 -158 220
+<< labels >>
+flabel metal4 40 20 80 40 0 FreeSans 160 0 0 0 VSUBS
+port 0 nsew
+flabel metal4 -20 -20 20 0 0 FreeSans 160 0 0 0 VDD
+port 1 nsew
+<< end >>

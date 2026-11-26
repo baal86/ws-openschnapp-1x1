@@ -1,0 +1,74 @@
+* NGSPICE file created from ip_current_source_parax.ext - technology: gf180mcuD
+
+.subckt ip_current_source_parax VDD vsubs src_b src_a
+X0 src_a a_2720_3600# a_3152_2676# vsubs.t5 nfet_06v0 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.7u
+X1 a_3152_2676# a_2720_3600# src_a vsubs.t5 nfet_06v0 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.7u
+X2 a_2440_4922# a_2720_3600# vsubs.t0 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X3 a_1880_4922# a_1880_3382# vsubs.t0 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X4 a_1880_3382# VDD vsubs.t1 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X5 a_2440_4922# a_2440_3382# vsubs.t0 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X6 a_2440_3382# a_2160_2060# vsubs.t1 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X7 a_2720_3600# a_2720_3600# vsubs vsubs.t7 nfet_06v0 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=1u
+X8 a_3152_4024# a_2720_3600# vsubs.t4 vsubs.t3 nfet_06v0 ad=0.22p pd=1.88u as=0.22p ps=1.88u w=0.5u l=5u
+X9 a_1880_4922# a_2160_3382# vsubs.t0 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X10 a_2160_3382# a_2160_2060# vsubs.t1 ppolyf_u_1k_6p0 r_width=1u r_length=6u
+X11 src_b a_2720_3600# a_3152_4024# vsubs.t2 nfet_06v0 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.7u
+X12 a_3152_4024# a_2720_3600# src_b vsubs.t2 nfet_06v0 ad=2.2p pd=10.88u as=2.2p ps=10.88u w=5u l=0.7u
+X13 vsubs.t4 a_2720_3600# a_3152_2676# vsubs.t6 nfet_06v0 ad=0.22p pd=1.88u as=0.22p ps=1.88u w=0.5u l=5u
+R0 vsubs.t4 vsubs.t0 896.072
+R1 vsubs.t1 vsubs.t7 675.537
+R2 vsubs.t5 vsubs.t1 457.322
+R3 vsubs.t4 vsubs.t6 429.464
+R4 vsubs.t0 vsubs.t3 229.821
+R5 vsubs.t4 vsubs.t2 844.917
+R6 vsubs vsubs.t7 406.805
+R7 vsubs.t6 vsubs.t5 4.64336
+R8 vsubs.t3 vsubs.t2 4.64336
+R9 vsubs vsubs.t4 2.62523
+C0 a_2160_2060# VDD 0.05407f
+C1 a_1880_3382# src_a 0
+C2 a_2720_3600# a_3152_4024# 0.5866f
+C3 a_1880_3382# a_1880_4922# 0.00659f
+C4 a_2160_3382# src_a 0
+C5 a_2160_3382# a_2440_3382# 0.16601f
+C6 a_2160_3382# a_1880_4922# 0.00659f
+C7 a_3152_4024# src_b 0.62579f
+C8 VDD a_1880_3382# 0.00743f
+C9 a_3152_4024# a_1880_4922# 0
+C10 a_3152_2676# a_1880_3382# 0
+C11 a_2160_2060# a_2160_3382# 0.00659f
+C12 a_3152_2676# a_2160_3382# 0
+C13 a_2720_3600# src_b 0.2522f
+C14 src_a a_2720_3600# 0.25472f
+C15 a_2720_3600# a_2440_3382# 0.10056f
+C16 a_2720_3600# a_1880_4922# 0
+C17 a_3152_2676# a_3152_4024# 0.0092f
+C18 a_2440_4922# a_3152_4024# 0.0198f
+C19 src_a src_b 0.0149f
+C20 src_a a_2440_3382# 0
+C21 a_2160_3382# a_1880_3382# 0.16601f
+C22 VDD a_2720_3600# 0
+C23 a_2160_2060# a_2720_3600# 0.01263f
+C24 a_3152_2676# a_2720_3600# 1.2582f
+C25 a_2440_4922# a_2720_3600# 0.00855f
+C26 a_3152_2676# src_a 0.59614f
+C27 a_2160_2060# a_2440_3382# 0.00659f
+C28 a_3152_2676# a_2440_3382# 0
+C29 a_2440_4922# src_b 0
+C30 a_2440_4922# a_2440_3382# 0.00659f
+C31 a_1880_3382# a_2720_3600# 0
+C32 a_2440_4922# a_1880_4922# 0.06564f
+C33 a_2160_3382# a_2720_3600# 0.00101f
+C34 src_a vsubs 3.30338f
+C35 VDD vsubs 0.49789f
+C36 src_b vsubs 0.10673f
+C37 a_2160_2060# vsubs 0.54115f
+C38 a_3152_2676# vsubs 3.50384f
+C39 a_2440_3382# vsubs 0.34993f
+C40 a_2440_4922# vsubs 0.5587f
+C41 a_2160_3382# vsubs 0.33031f
+C42 a_1880_3382# vsubs 0.42454f
+C43 a_1880_4922# vsubs 0.58146f
+C44 a_3152_4024# vsubs 0.99993f
+.ends
+

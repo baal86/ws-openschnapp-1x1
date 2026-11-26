@@ -1,0 +1,33 @@
+* NGSPICE file created from ip_pixel_nd2ps_parax.ext - technology: gf180mcuD
+
+.subckt ip_pixel_nd2ps_parax cl read reset vsubs vdd
+X0 a_1000_n1300# reset vdd vsubs.t4 nfet_06v0 ad=0.2196p pd=2.04u as=0.2196p ps=2.04u w=0.3u l=1.3u
+X1 a_1058_n1456# a_1000_n1300# vdd vsubs.t3 nfet_06v0 ad=1.54p pd=7.88u as=1.54p ps=7.88u w=3.5u l=1.9u
+D0 vsubs.t1 a_1000_n1300# diode_nd2ps_06v0 pj=54u area=0.16125n
+X2 a_1058_n1456# read cl vsubs.t0 nfet_06v0 ad=0.2196p pd=2.04u as=0.2196p ps=2.04u w=0.3u l=0.7u
+R0 vsubs.t4 vsubs.t3 617.5
+R1 vsubs.t3 vsubs.t0 565.5
+R2 vsubs.n0 vsubs.t0 264.7
+R3 vsubs.t1 vsubs.t4 166.833
+R4 vsubs vsubs.n0 14.671
+R5 vsubs.n0 vsubs.t1 1.55724
+C0 cl a_1058_n1456# 0.02241f
+C1 cl a_1000_n1300# 0.10738f
+C2 a_1058_n1456# a_1000_n1300# 0.25846f
+C3 read reset 0.22013f
+C4 read vdd 0.46522f
+C5 reset vdd 1.26105f
+C6 cl read 0.13562f
+C7 cl reset 0.28564f
+C8 cl vdd 0.12781f
+C9 a_1058_n1456# read 0.01072f
+C10 a_1058_n1456# reset 0.02891f
+C11 read a_1000_n1300# 0.21363f
+C12 reset a_1000_n1300# 0.79242f
+C13 a_1058_n1456# vdd 0.13704f
+C14 vdd a_1000_n1300# 2.8433f
+C15 vdd vsubs 10.60588f
+C16 cl vsubs 1.81261f
+C17 a_1058_n1456# vsubs 4.50411f
+.ends
+

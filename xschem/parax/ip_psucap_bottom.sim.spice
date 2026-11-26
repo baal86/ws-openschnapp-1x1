@@ -1,0 +1,6 @@
+* NGSPICE file created from ip_psucap_bottom_parax.ext - technology: gf180mcuD
+
+.subckt ip_psucap_bottom_parax VDD VSUBS
+X0 VDD VSUBS cap_nmos_03v3 c_width=3.3u c_length=18.5u
+.ends
+

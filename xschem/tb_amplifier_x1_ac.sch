@@ -23,8 +23,9 @@ unitx=1
 logx=1
 logy=0
 sim_type=ac
-color=7
-node=ph(oltf)
+color="7 15"
+node="ph(oltf)
+ph(oltf_parax)"
 y2=180}
 B 2 -423.0622682802731 -1410 376.9377317197269 -1010 {flags=graph
 y1=-1.1
@@ -40,8 +41,9 @@ subdivx=8
 xlabmag=1.0
 ylabmag=1.0
 legendmag=1.0
-node=oltf
-color=4
+node="oltf
+oltf_parax"
+color="4 14"
 dataset=-1
 unitx=1
 logx=1
@@ -76,6 +78,30 @@ N 610 -380 610 -320 {lab=OUT}
 N 290 -300 320 -300 {lab=SIG}
 N 340 -480 400 -480 {lab=FB}
 N 0 -300 120 -300 {lab=SIG}
+N 630 100 840 100 {lab=OUT_PARAX}
+N 290 80 300 80 {lab=FB_PARAX}
+N 540 100 630 100 {lab=OUT_PARAX}
+N 570 -60 610 -60 {lab=FB_PARAX}
+N 510 -60 570 -60 {lab=FB_PARAX}
+N 740 100 740 130 {lab=OUT_PARAX}
+N 740 190 740 230 {lab=0}
+N 400 -60 510 -60 {lab=FB_PARAX}
+N 270 -60 340 -60 {lab=FB_PARAX}
+N 270 -20 270 80 {lab=FB_PARAX}
+N 270 80 290 80 {lab=FB_PARAX}
+N 270 -60 270 -20 {lab=FB_PARAX}
+N 610 -60 610 -20 {lab=FB_PARAX}
+N 420 190 420 200 {lab=0}
+N 420 10 420 20 {lab=VDD}
+N 490 100 540 100 {lab=OUT_PARAX}
+N 250 120 290 120 {lab=SIG}
+N 320 120 350 120 {lab=SIG}
+N 300 80 350 80 {lab=FB_PARAX}
+N 610 40 610 100 {lab=OUT_PARAX}
+N 290 120 320 120 {lab=SIG}
+N 340 -60 400 -60 {lab=FB_PARAX}
+N 160 -300 160 120 {lab=SIG}
+N 160 120 250 120 {lab=SIG}
 C {devices/launcher.sym} -815 -465 0 0 {name=h1
 descr="Load Waveforms"
 tclcommand="
@@ -86,10 +112,10 @@ C {devices/code_shown.sym} -880 240 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::180MCU_MODELS/sm141064.ngspice statistical
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice diode_typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
 C {simulator_commands_shown.sym} -890 -320 0 0 {name=COMMANDS
 simulator=ngspice
@@ -147,3 +173,19 @@ C {vdd.sym} 420 -410 0 0 {name=l11 lab=VDD}
 C {ngspice_probe.sym} 270 -300 0 0 {name=r1}
 C {vsource.sym} 610 -410 0 0 {name=V1 value="AC 1" savecurrent=false}
 C {lab_wire.sym} 570 -480 0 0 {name=p1 sig_type=std_logic lab=FB}
+C {ip_amplifier.sym} 420 100 0 0 {name=x1
+schematic=ip_amplifier_parax.sim
+spice_sym_def="tcleval(.include [file normalize ./parax/ip_amplifier.sim.spice])"
+tclcommand="textwindow [file normalize ./parax/ip_amplifier.sim.spice]"}
+C {gnd.sym} 420 200 0 0 {name=l3 lab=0}
+C {lab_wire.sym} 800 100 0 0 {name=p5 sig_type=std_logic lab=OUT_PARAX}
+C {res.sym} 740 160 0 0 {name=R3
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {gnd.sym} 740 230 0 0 {name=l5 lab=0}
+C {vdd.sym} 420 10 0 0 {name=l6 lab=VDD}
+C {ngspice_probe.sym} 270 120 0 0 {name=r4}
+C {vsource.sym} 610 10 0 0 {name=V4 value="AC 1" savecurrent=false}
+C {lab_wire.sym} 570 -60 0 0 {name=p6 sig_type=std_logic lab=FB_PARAX}

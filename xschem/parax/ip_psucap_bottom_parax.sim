@@ -1,0 +1,5 @@
+| units: 0.5 tech: gf180mcuD format: MIT
+x VDD VSUBS s=105600,1640 l=3700 w=660 x=160 y=159 cap_nmos_03v3
+C VDD0 10.6
+R VDD 37
+R VSUBS 382

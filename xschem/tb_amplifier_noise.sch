@@ -47,11 +47,11 @@ puts [format \{Total RMS Noise = %.4g uV\} $v]
 C {devices/code_shown.sym} -1150 180 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice statistical
 .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice diode_typical
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 "}
 C {simulator_commands_shown.sym} -1160 -300 0 0 {name=COMMANDS
 simulator=ngspice

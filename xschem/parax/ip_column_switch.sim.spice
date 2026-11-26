@@ -1,0 +1,13 @@
+* NGSPICE file created from ip_column_switch_parax.ext - technology: gf180mcuD
+
+.subckt ip_column_switch_parax vsubs bus en cl
+X0 bus en cl vsubs nfet_06v0 ad=0.22p pd=1.88u as=0.22p ps=1.88u w=0.5u l=0.7u
+X1 cl en bus vsubs nfet_06v0 ad=0.22p pd=1.88u as=0.22p ps=1.88u w=0.5u l=0.7u
+D0 vsubs en diode_nd2ps_06v0 pj=2u area=0.25p
+C0 en bus 0.75868f
+C1 cl en 0.20666f
+C2 cl bus 0.31159f
+C3 bus vsubs 2.41238f
+C4 cl vsubs 1.36602f
+.ends
+

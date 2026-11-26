@@ -1,0 +1,12 @@
+* NGSPICE file created from ip_pixel_frame_right_parax.ext - technology: gf180mcuD
+
+.subckt ip_pixel_frame_right_parax
+D0 a_3800_n2000# a_3996_n1464# diode_nd2ps_06v0 pj=2u area=0.25p
+D1 a_3800_n2000# a_3996_376# diode_nd2ps_06v0 pj=2u area=0.25p
+X0 a_4400_n1800# a_3800_n2000# cap_nmos_03v3 c_width=8.5u c_length=12.5u
+C0 a_3996_n1464# a_4400_n1800# 0.81946f
+C1 a_3996_376# a_4400_n1800# 0.80855f
+C2 a_3996_n1464# a_3800_n2000# 1.22503f
+C3 a_3996_376# a_3800_n2000# 1.22691f
+.ends
+

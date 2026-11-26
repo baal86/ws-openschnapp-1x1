@@ -1,0 +1,21 @@
+puts "START"
+puts $project
+
+set layout [readnet spice $project.lvs.spice]
+set source [readnet spice /dev/null]
+
+# top level GL verilog
+readnet verilog ../src/project.v $source
+readnet verilog ../src/column.v $source
+
+# add an GL verilog of any digital blocks:
+readnet verilog ../verilog/gl/ip_row_mux.v $source
+readnet verilog ../verilog/gl/ip_column_mux.v $source
+readnet verilog ../verilog/gl/ip_reset_latch.v $source
+
+# add any spice files of your analog blocks:
+readnet spice ../xschem/lvs/$project.lvs.spice $source
+
+set project [file rootname $project]
+
+lvs "$layout $project" "$source $project" $::env(PDK_ROOT)/$::env(PDK)/libs.tech/netgen/gf180mcuD_setup.tcl lvs.report -blackbox

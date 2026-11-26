@@ -1,0 +1,6 @@
+* NGSPICE file created from ip_psucap_br_parax.ext - technology: gf180mcuD
+
+.subckt ip_psucap_br_parax
+X0 a_300_199# a_0_n1# cap_nmos_03v3 c_width=17.5u c_length=28.5u
+.ends
+

@@ -1,0 +1,16 @@
+| units: 0.5 tech: gf180mcuD format: MIT
+x reset vdd a_1000_n1300# vsubs s=8784,408 d=8784,408 l=260 w=60 x=2156 y=-1785 nfet_06v0
+x a_1000_n1300# vdd a_1058_n1456# vsubs s=61600,1576 d=61600,1576 l=380 w=700 x=1266 y=-1839 nfet_06v0
+x a_1000_n1300# vsubs l=0 w=0 x=1000 y=-1299 diode_nd2ps_06v0
+x read cl a_1058_n1456# vsubs s=8784,408 d=8784,408 l=140 w=60 x=1064 y=-1655 nfet_06v0
+C a_1000_n1300# vdd 2.8
+C vdd0 5.8
+R vdd 100
+C reset0 2.3
+R reset 20
+R cl 20
+R read 16
+R vsubs 453
+R a_1058_n1456# 77
+C a_1000_n1300#0 6.2
+R a_1000_n1300# 31

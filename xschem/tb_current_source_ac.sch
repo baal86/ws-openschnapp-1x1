@@ -1,0 +1,128 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+B 2 0 260 800 660 {flags=graph
+y1=5.1
+y2=9
+ypos1=0
+ypos2=2
+divy=5
+subdivy=8
+unity=1
+x1=-1.5
+x2=8.5
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+legendmag=1.0
+dataset=-1
+unitx=1
+logx=1
+logy=1
+hilight_wave=-1
+sim_type=ac
+color="4 5"
+node="zout; vmir I(vvmir) /
+zout_parax; vmir_parax I(vvmir_parax) /"
+rainbow=0}
+T {Nominal} 0 -280 0 0 0.4 0.4 {}
+T {PARAX} 460 -280 0 0 0.4 0.4 {}
+N 160 -200 240 -200 {lab=vref}
+N 240 -110 240 -100 {lab=GND}
+N 240 -200 240 -170 {lab=vref}
+N 100 -40 100 -20 {lab=vmir}
+N 100 -200 100 -190 {lab=vmir}
+N 160 -200 160 -190 {lab=vref}
+N 160 -40 160 -20 {lab=vref}
+N 100 -130 100 -40 {lab=vmir}
+N 160 -130 160 -40 {lab=vref}
+N 0 -120 0 -110 {lab=GND}
+N 0 -200 0 -180 {lab=vmir}
+N 0 -200 100 -200 {lab=vmir}
+N 160 -190 160 -130 {lab=vref}
+N 100 -190 100 -130 {lab=vmir}
+N 630 -200 710 -200 {lab=vref}
+N 570 -40 570 -20 {lab=vmir_parax}
+N 570 -200 570 -190 {lab=vmir_parax}
+N 630 -200 630 -190 {lab=vref}
+N 630 -40 630 -20 {lab=vref}
+N 570 -130 570 -40 {lab=vmir_parax}
+N 630 -130 630 -40 {lab=vref}
+N 470 -120 470 -110 {lab=GND}
+N 470 -200 470 -180 {lab=vmir_parax}
+N 470 -200 570 -200 {lab=vmir_parax}
+N 630 -190 630 -130 {lab=vref}
+N 570 -190 570 -130 {lab=vmir_parax}
+N 120 -200 120 -20 {lab=vref}
+N 120 -200 160 -200 {lab=vref}
+N 590 -200 590 -20 {lab=vref}
+N 590 -200 630 -200 {lab=vref}
+N 160 100 160 120 {lab=GND}
+N 630 100 630 120 {lab=GND}
+C {devices/launcher.sym} -595 -285 0 0 {name=h1
+descr="Load Waveforms"
+tclcommand="
+xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw
+"
+}
+C {devices/code_shown.sym} -660 330 0 0 {name=MODELS only_toplevel=true
+format="tcleval( @value )"
+value="
+.lib $::180MCU_MODELS/sm141064.ngspice statistical
+.lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
+.lib $::180MCU_MODELS/sm141064.ngspice diode_typical
+.lib $::180MCU_MODELS/sm141064.ngspice res_statistical
+"}
+C {devices/launcher.sym} -595 -245 0 0 {name=h2
+descr="Annotate"
+tclcommand="
+xschem annotate_op $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw
+"
+}
+C {simulator_commands_shown.sym} -660 -130 0 0 {name=COMMANDS
+simulator=ngspice
+only_toplevel=false 
+value="
+# Global parameters typically sourced from design.ngspice
+.param sw_stat_global   = 1
+.param sw_stat_mismatch = 1
+.param mc_skew          = 1
+.param res_mc_skew=3
+.param cap_mc_skew=3
+.param fnoicor=0
+
+.control
+	save all
+	repeat 25
+		mc_source
+		ac dec 1000 0.01 100Meg
+		write tb_current_source_ac.raw
+		set appendwrite
+		reset
+	end
+	quit
+.endc
+"}
+C {ip_current_source.sym} 130 40 0 0 {name=x1}
+C {vsource.sym} 240 -140 0 0 {name=V1 value=3.3 savecurrent=false}
+C {gnd.sym} 160 120 0 0 {name=l8 lab=GND}
+C {gnd.sym} 240 -100 0 0 {name=l1 lab=GND}
+C {lab_wire.sym} 200 -200 0 0 {name=p2 sig_type=std_logic lab=vref}
+C {vsource.sym} 0 -150 0 0 {name=Vvmir value="DC 2.5 AC 1" savecurrent=false}
+C {gnd.sym} 0 -110 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} 60 -200 0 0 {name=p3 sig_type=std_logic lab=vmir}
+C {ip_current_source.sym} 600 40 0 0 {name=x2
+schematic=ip_current_source_parax.sim
+spice_sym_def="tcleval(.include [file normalize ./parax/ip_current_source.sim.spice])"
+tclcommand="textwindow [file normalize ./parax/ip_current_source.sim.spice]"}
+C {lab_wire.sym} 670 -200 0 0 {name=p5 sig_type=std_logic lab=vref}
+C {vsource.sym} 470 -150 0 0 {name=Vvmir_parax value="DC 2.5 AC 1" savecurrent=false}
+C {gnd.sym} 470 -110 0 0 {name=l5 lab=GND}
+C {lab_wire.sym} 560 -200 0 0 {name=p6 sig_type=std_logic lab=vmir_parax
+}
+C {gnd.sym} 630 120 0 0 {name=l3 lab=GND}

@@ -62,20 +62,38 @@ module chip_core #(
     wire pixel_read;
 
     (* keep *)
-    ip_pixel_column_n u_pixel_tl (
+    ip_pixel_column_w u_pixel_c1 (
     );
 
     (* keep *)
-    ip_pixel_column_n u_pixel_tr (
+    ip_pixel_column_w u_pixel_c2 (
     );
 
     (* keep *)
-    ip_pixel_column_n u_pixel_bl (
+    ip_pixel_column_w u_pixel_c3 (
     );
 
     (* keep *)
-    ip_pixel_column_n u_pixel_br (
+    ip_pixel_column_w u_pixel_c4 (
     );
+
+    (* keep *)
+    ip_pixel_column_w u_pixel_c5 (
+    );
+
+    (* keep *)
+    ip_pixel_column_w u_pixel_c6 (
+    );
+
+    (* keep *)
+    ip_pixel_column_w u_pixel_c7 (
+    );
+
+    (* keep *)
+    ip_pixel_column_w u_pixel_c8 (
+    );
+
+
 
 endmodule
 

@@ -1,0 +1,65 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO ip_pixel_column_w
+  CLASS BLOCK ;
+  FOREIGN ip_pixel_column_w ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 2420.000 BY 480.000 ;
+  OBS
+      LAYER Nwell ;
+        RECT 0.000 174.000 2420.000 480.000 ;
+      LAYER Pwell ;
+        RECT 0.000 160.000 17.500 174.000 ;
+      LAYER Nwell ;
+        RECT 17.500 160.000 2420.000 174.000 ;
+      LAYER Pwell ;
+        RECT 0.000 140.500 0.500 160.000 ;
+      LAYER Nwell ;
+        RECT 0.500 140.500 2420.000 160.000 ;
+        RECT 0.000 85.500 2420.000 140.500 ;
+      LAYER Pwell ;
+        RECT 0.000 71.500 17.500 85.500 ;
+      LAYER Nwell ;
+        RECT 17.500 71.500 2420.000 85.500 ;
+      LAYER Pwell ;
+        RECT 0.000 60.500 0.500 71.500 ;
+      LAYER Nwell ;
+        RECT 0.500 60.500 2420.000 71.500 ;
+      LAYER Pwell ;
+        RECT 0.000 60.000 17.500 60.500 ;
+      LAYER Nwell ;
+        RECT 17.500 60.000 2420.000 60.500 ;
+        RECT 0.000 45.000 2420.000 60.000 ;
+      LAYER Pwell ;
+        RECT 0.000 44.500 15.000 45.000 ;
+      LAYER Nwell ;
+        RECT 15.000 44.500 2420.000 45.000 ;
+      LAYER Pwell ;
+        RECT 0.000 33.200 0.500 44.500 ;
+      LAYER Nwell ;
+        RECT 0.500 33.200 2420.000 44.500 ;
+      LAYER Pwell ;
+        RECT 0.000 30.000 7.800 33.200 ;
+      LAYER Nwell ;
+        RECT 7.800 30.000 2420.000 33.200 ;
+        RECT 0.000 17.500 2420.000 30.000 ;
+      LAYER Pwell ;
+        RECT 0.000 0.000 14.000 17.500 ;
+      LAYER Nwell ;
+        RECT 14.000 0.000 2420.000 17.500 ;
+      LAYER Metal1 ;
+        RECT 0.000 0.000 2420.000 480.000 ;
+      LAYER Metal2 ;
+        RECT 0.000 0.000 2420.000 480.000 ;
+      LAYER Metal3 ;
+        RECT 1.200 0.000 2420.000 480.000 ;
+      LAYER Metal4 ;
+        RECT 2.500 0.100 2420.000 479.700 ;
+      LAYER Metal5 ;
+        RECT 3.500 88.000 15.500 201.500 ;
+  END
+END ip_pixel_column_w
+END LIBRARY
+

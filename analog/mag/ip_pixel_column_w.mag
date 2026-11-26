@@ -1,0 +1,45 @@
+magic
+tech gf180mcuD
+timestamp 1795707879
+<< error_p >>
+rect 170 3228 175 3229
+rect 159 3222 170 3224
+use ip_column_switch  ip_column_switch_1
+timestamp 1790327709
+transform 0 -1 430 1 0 0
+box 0 30 300 80
+use ip_current_source  ip_current_source_0
+timestamp 1790325955
+transform 1 0 -160 0 1 -180
+box 160 180 440 530
+use ip_pixel_block  ip_pixel_block_0
+timestamp 1795695846
+transform 0 -1 20000 1 0 1000
+box -1000 400 8600 10000
+use ip_pixel_block  ip_pixel_block_1
+timestamp 1795695846
+transform 0 -1 10400 1 0 1000
+box -1000 400 8600 10000
+use ip_pixel_block  ip_pixel_block_2
+timestamp 1795695846
+transform 0 -1 29600 1 0 1000
+box -1000 400 8600 10000
+use ip_pixel_block  ip_pixel_block_3
+timestamp 1795695846
+transform 0 -1 39200 1 0 1000
+box -1000 400 8600 10000
+use ip_pixel_block  ip_pixel_block_4
+timestamp 1795695846
+transform 0 -1 48800 1 0 1000
+box -1000 400 8600 10000
+use ip_pixel_nd2ps_dummy  ip_pixel_nd2ps_dummy_0
+timestamp 1790325955
+transform 1 0 -80 0 1 800
+box 80 -200 380 100
+use ip_sigproc  ip_sigproc_0
+timestamp 1795698877
+transform 0 1 0 -1 0 4580
+box 0 0 3380 350
+<< properties >>
+string FIXED_BBOX 0 0 48400 9600
+<< end >>

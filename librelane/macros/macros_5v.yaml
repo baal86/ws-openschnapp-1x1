@@ -89,3 +89,8 @@ MACROS:
       i_chip_core.u_pixel:
         location: [1000, 1000]
         orientation: N
+
+# This is an alternative method compared to
+# specifying the power connections in the RTL
+PDN_MACRO_CONNECTIONS:
+- "i_chip_core.u_pixel VDD VSS VDD VSS"

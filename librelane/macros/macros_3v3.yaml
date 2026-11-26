@@ -102,8 +102,21 @@ MACROS:
         location: [970, 500]
         orientation: E
 
+  ip_pixel_nd2ps:
+    gds:
+      - dir::../analog/gds/ip_pixel_nd2ps.mag.gds
+    lef:
+      - dir::../analog/lef/ip_pixel_nd2ps.mag.lef
+    vh:
+      - dir::../analog/src/ip_pixel_nd2ps.v
+    instances:
+      i_chip_core.u_pixel:
+        location: [1000, 1000]
+        orientation: N
+
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
 - "i_chip_core.sram_0 VDD VSS VDD VSS"
 - "i_chip_core.sram_1 VDD VSS VDD VSS"
+

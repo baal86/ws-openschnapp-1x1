@@ -63,6 +63,22 @@ module chip_core #(
 
     logic [7:0] sram_0_out;
 
+
+    wire pixel_read;
+
+
+    (* keep *)
+    ip_pixel_nd2ps u_pixel (
+        `ifdef USE_POWER_PINS
+        .vdd   (VDD),
+        .vsubs (VSS),
+        `endif
+
+        .reset ('0),
+        .cl    ('0),
+        .read  (pixel_read)
+    );
+
     `gf180mcu_xxx_ip_sram__sram512x8m8wm1 sram_0 (
         `ifdef USE_POWER_PINS
         .VDD  (VDD),

@@ -32,6 +32,7 @@ DESIGN_NAME: chip_top
 VERILOG_FILES:
 - dir::../src/chip_top.sv
 - dir::../src/chip_core.sv
+- dir::../analog/src/ip_pixel_nd2ps.v
 
 # Enable plugin for better SystemVerilog support
 # USE_SLANG: True
@@ -180,3 +181,4 @@ KLAYOUT_ANTENNA_OPTIONS:
   decks: "antenna"
   variant: ref::$PDK
   workers: max
+

@@ -1,0 +1,80 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO ip_pixel_nd2ps
+  CLASS BLOCK ;
+  FOREIGN ip_pixel_nd2ps ;
+  ORIGIN -4.000 10.000 ;
+  SIZE 15.000 BY 15.000 ;
+  PIN cl
+    ANTENNADIFFAREA 0.219600 ;
+    PORT
+      LAYER Metal4 ;
+        RECT 5.400 -8.900 5.800 -8.500 ;
+    END
+  END cl
+  PIN read
+    ANTENNAGATEAREA 0.210000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 4.700 -8.200 5.100 -7.800 ;
+    END
+  END read
+  PIN reset
+    ANTENNAGATEAREA 0.390000 ;
+    PORT
+      LAYER Metal3 ;
+        RECT 11.300 -8.000 11.700 -7.600 ;
+    END
+  END reset
+  PIN vsubs
+    ANTENNADIFFAREA 14.750000 ;
+    PORT
+      LAYER Metal4 ;
+        RECT 4.700 -9.400 5.100 -9.000 ;
+    END
+  END vsubs
+  PIN vdd
+    ANTENNADIFFAREA 1.759600 ;
+    PORT
+      LAYER Metal2 ;
+        RECT 9.950 -10.000 10.650 -9.450 ;
+    END
+  END vdd
+  OBS
+      LAYER Pwell ;
+        RECT 4.000 4.500 19.000 5.000 ;
+        RECT 4.000 -6.700 4.500 4.500 ;
+      LAYER Nwell ;
+        RECT 4.500 -6.700 19.000 4.500 ;
+      LAYER Pwell ;
+        RECT 4.000 -10.000 11.800 -6.700 ;
+      LAYER Nwell ;
+        RECT 11.800 -10.000 19.000 -6.700 ;
+      LAYER Metal1 ;
+        RECT 4.000 -10.000 19.000 5.000 ;
+      LAYER Metal2 ;
+        RECT 4.000 -9.150 19.000 5.000 ;
+        RECT 4.000 -9.700 9.650 -9.150 ;
+        RECT 4.000 -10.000 9.950 -9.700 ;
+        RECT 10.950 -10.000 19.000 -9.150 ;
+      LAYER Metal3 ;
+        RECT 4.000 -7.300 19.000 4.700 ;
+        RECT 4.000 -7.500 11.000 -7.300 ;
+        RECT 4.000 -8.500 4.400 -7.500 ;
+        RECT 5.400 -8.300 11.000 -7.500 ;
+        RECT 12.000 -8.300 19.000 -7.300 ;
+        RECT 5.400 -8.500 19.000 -8.300 ;
+        RECT 4.000 -10.000 19.000 -8.500 ;
+      LAYER Metal4 ;
+        RECT 4.100 -8.200 18.700 5.000 ;
+        RECT 4.100 -8.700 5.100 -8.200 ;
+        RECT 4.100 -9.700 4.400 -8.700 ;
+        RECT 6.100 -9.200 18.700 -8.200 ;
+        RECT 5.400 -9.700 18.700 -9.200 ;
+        RECT 4.100 -10.000 18.700 -9.700 ;
+  END
+END ip_pixel_nd2ps
+END LIBRARY
+

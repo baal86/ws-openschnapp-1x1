@@ -323,9 +323,9 @@ C {ammeter.sym} 460 -270 0 0 {name=Vmeas3 savecurrent=false spice_ignore=0}
 C {lab_wire.sym} -410 -150 3 0 {name=p1 sig_type=std_logic lab=vsubs}
 C {lab_wire.sym} 100 -520 0 0 {name=p15 sig_type=std_logic lab=PBIAS}
 C {lab_wire.sym} 80 -180 0 0 {name=p16 sig_type=std_logic lab=COMMON_}
-C {symbols/cap_mim_analog.sym} 380 110 0 0 {name=C1
+C {symbols/cap_mim_2f0fF.sym} 380 110 0 0 {name=C2
 W=10e-6
 L=10e-6
-model=cap_mim_2f0_m2m3_noshield
+model=cap_mim_2f0fF
 spiceprefix=X
 m=2}

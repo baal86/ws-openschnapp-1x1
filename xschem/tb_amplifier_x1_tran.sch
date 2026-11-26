@@ -89,6 +89,7 @@ C {devices/code_shown.sym} -1150 60 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .inc $::180MCU_MODELS/design.spice
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical

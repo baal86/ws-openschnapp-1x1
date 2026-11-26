@@ -50,6 +50,7 @@ C {devices/code_shown.sym} -1150 220 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::180MCU_MODELS/sm141064.ngspice statistical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 .lib $::180MCU_MODELS/sm141064.ngspice moscap_typical
 .lib $::180MCU_MODELS/sm141064.ngspice diode_typical

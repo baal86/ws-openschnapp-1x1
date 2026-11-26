@@ -1,0 +1,12 @@
+magic
+tech gf180mcuD
+timestamp 1795696555
+use ip_pixel_block  ip_pixel_block_0
+timestamp 1795695846
+transform 1 0 1000 0 1 -400
+box -1000 400 8600 10000
+use ip_pixel_block  ip_pixel_block_1
+timestamp 1795695846
+transform 1 0 1000 0 1 9200
+box -1000 400 8600 10000
+<< end >>

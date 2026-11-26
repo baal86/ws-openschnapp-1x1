@@ -8,3 +8,5 @@ img/
 *.lyrdb
 generated_defines.svh
 xschem/simulation/
+mag/*txt
+mag/*.spice

@@ -1,152 +1,152 @@
 * NGSPICE file created from ip_amplifier_parax.ext - technology: gf180mcuD
 
 .subckt ip_amplifier_parax vsubs vdd INP INN OUTP
-X0 vdd.t8 a_1612_368# OUTP vdd.t9 pfet_03v3 ad=5.28p pd=24.88u as=6.015p ps=13.1u w=12u l=0.5u
+X0 vdd.t9 a_1612_368# OUTP vdd.t10 pfet_03v3 ad=5.28p pd=24.88u as=6.015p ps=13.1u w=12u l=0.5u
 X1 OUTP a_6130_2884# cap_mim_2f0_m4m5_noshield c_width=10u c_length=10u
-X2 a_1424_2016# a_1080_400# a_1080_400# vsubs.t1 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X3 a_1424_2016# a_1080_400# vsubs.t5 vsubs.t6 nfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
-X4 a_240_2922# a_520_400# vsubs.t8 ppolyf_u_1k r_width=1u r_length=12u
-X5 OUTP a_6130_2884# vsubs.t15 vsubs.t16 nfet_03v3 ad=6.03p pd=13.2u as=6.03p ps=13.2u w=12u l=0.5u
-X6 a_800_2922# a_1080_400# vsubs.t10 ppolyf_u_1k r_width=1u r_length=12u
-X7 OUTP a_6130_2884# vsubs.t13 vsubs.t12 nfet_03v3 ad=6.03p pd=13.2u as=5.28p ps=24.88u w=12u l=0.5u
-X8 vsubs.t5 a_1080_400# a_1424_2016# vsubs.t4 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=2u
-X9 vsubs.t15 a_6130_2884# OUTP vsubs.t17 nfet_03v3 ad=5.28p pd=24.88u as=6.03p ps=13.2u w=12u l=0.5u
-X10 vsubs.t15 a_6130_2884# OUTP vsubs.t14 nfet_03v3 ad=6.03p pd=13.2u as=6.03p ps=13.2u w=12u l=0.5u
-X11 a_4374_1878# a_1612_368# a_4186_1878# vdd.t0 pfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
-X12 a_1612_368# a_1612_368# a_4186_430# vdd.t0 pfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
-X13 vsubs.t13 a_6130_536# a_6130_536# vsubs.t18 nfet_03v3 ad=2.64p pd=12.88u as=2.64p ps=12.88u w=6u l=5u
-X14 a_1612_368# a_1080_400# a_1424_368# vsubs.t2 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X15 a_4186_430# a_1612_368# a_1612_368# vdd.t3 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X16 a_240_2922# vdd vsubs.t9 ppolyf_u_1k r_width=1u r_length=12u
-X17 a_1612_368# a_1080_400# a_1424_368# vsubs.t0 nfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
-X18 a_4186_1878# a_1612_368# a_4374_1878# vdd.t3 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X19 a_4186_430# a_1612_368# a_1612_368# vdd.t1 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X20 vsubs.t13 a_6130_536# a_6130_2884# vsubs.t18 nfet_03v3 ad=2.64p pd=12.88u as=2.64p ps=12.88u w=6u l=5u
-X21 a_1424_368# a_1080_400# a_1612_368# vsubs.t3 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X22 vdd.t6 a_1612_368# a_4186_430# vdd.t4 pfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
-X23 a_4374_1878# INN a_6130_536# vdd.t10 pfet_03v3 ad=7.92p pd=36.88u as=7.92p ps=36.88u w=18u l=5u
-X24 a_1424_368# a_1080_400# a_1612_368# vsubs.t1 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X25 a_4186_1878# a_1612_368# a_4374_1878# vdd.t1 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X26 a_1612_368# a_1612_368# a_4186_430# vdd.t2 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X27 a_1080_400# a_1080_400# a_1424_2016# vsubs.t2 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X28 vsubs.t7 a_1080_400# a_1424_368# vsubs.t4 nfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
-X29 a_800_2922# a_520_400# vsubs.t11 ppolyf_u_1k r_width=1u r_length=12u
-X30 a_1080_400# a_1080_400# a_1424_2016# vsubs.t0 nfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
-X31 vdd.t5 a_1612_368# a_4186_1878# vdd.t4 pfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
+X2 a_1424_2016# a_1080_400# a_1080_400# vsubs.t4 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X3 a_1424_2016# a_1080_400# vsubs.t8 vsubs.t9 nfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
+X4 a_240_2922# a_520_400# vsubs.t0 ppolyf_u_1k r_width=1u r_length=12u
+X5 OUTP a_6130_2884# vsubs.t17 vsubs.t18 nfet_03v3 ad=6.03p pd=13.2u as=6.03p ps=13.2u w=12u l=0.5u
+X6 a_800_2922# a_1080_400# vsubs.t11 ppolyf_u_1k r_width=1u r_length=12u
+X7 OUTP a_6130_2884# vsubs.t13 vsubs.t15 nfet_03v3 ad=6.03p pd=13.2u as=5.28p ps=24.88u w=12u l=0.5u
+X8 vsubs.t8 a_1080_400# a_1424_2016# vsubs.t7 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=2u
+X9 vsubs.t17 a_6130_2884# OUTP vsubs.t19 nfet_03v3 ad=5.28p pd=24.88u as=6.03p ps=13.2u w=12u l=0.5u
+X10 vsubs.t17 a_6130_2884# OUTP vsubs.t16 nfet_03v3 ad=6.03p pd=13.2u as=6.03p ps=13.2u w=12u l=0.5u
+X11 a_4374_1878# a_1612_368# a_4186_1878# vdd.t1 pfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
+X12 a_1612_368# a_1612_368# a_4186_430# vdd.t1 pfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
+X13 vsubs.t13 a_6130_536# a_6130_536# vsubs.t12 nfet_03v3 ad=2.64p pd=12.88u as=2.64p ps=12.88u w=6u l=5u
+X14 a_1612_368# a_1080_400# a_1424_368# vsubs.t5 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X15 a_4186_430# a_1612_368# a_1612_368# vdd.t4 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X16 a_240_2922# vdd vsubs.t1 ppolyf_u_1k r_width=1u r_length=12u
+X17 a_1612_368# a_1080_400# a_1424_368# vsubs.t3 nfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
+X18 a_4186_1878# a_1612_368# a_4374_1878# vdd.t4 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X19 a_4186_430# a_1612_368# a_1612_368# vdd.t2 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X20 vsubs.t13 a_6130_536# a_6130_2884# vsubs.t12 nfet_03v3 ad=2.64p pd=12.88u as=2.64p ps=12.88u w=6u l=5u
+X21 a_1424_368# a_1080_400# a_1612_368# vsubs.t6 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X22 vdd.t7 a_1612_368# a_4186_430# vdd.t5 pfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
+X23 a_4374_1878# INN a_6130_536# vdd.t0 pfet_03v3 ad=7.92p pd=36.88u as=7.92p ps=36.88u w=18u l=5u
+X24 a_1424_368# a_1080_400# a_1612_368# vsubs.t4 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X25 a_4186_1878# a_1612_368# a_4374_1878# vdd.t2 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X26 a_1612_368# a_1612_368# a_4186_430# vdd.t3 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X27 a_1080_400# a_1080_400# a_1424_2016# vsubs.t5 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X28 vsubs.t10 a_1080_400# a_1424_368# vsubs.t7 nfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
+X29 a_800_2922# a_520_400# vsubs.t2 ppolyf_u_1k r_width=1u r_length=12u
+X30 a_1080_400# a_1080_400# a_1424_2016# vsubs.t3 nfet_03v3 ad=3.03p pd=7.2u as=2.64p ps=12.88u w=6u l=0.5u
+X31 vdd.t6 a_1612_368# a_4186_1878# vdd.t5 pfet_03v3 ad=2.64p pd=12.88u as=3.03p ps=7.2u w=6u l=2u
 X32 OUTP a_6130_2884# cap_mim_2f0_m4m5_noshield c_width=10u c_length=10u
-X33 a_4374_1878# a_1612_368# a_4186_1878# vdd.t2 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X34 a_1424_2016# a_1080_400# a_1080_400# vsubs.t3 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
-X35 OUTP a_1612_368# vdd.t8 vdd.t7 pfet_03v3 ad=6.015p pd=13.1u as=5.28p ps=24.88u w=12u l=0.5u
-X36 a_6130_2884# INP a_4374_1878# vdd.t10 pfet_03v3 ad=8.294p pd=37.56u as=7.92p ps=36.88u w=18u l=5u
-R0 vdd.t10 vdd.t7 721.385
-R1 vdd.t4 vdd.n3 542.768
-R2 vdd.t8 vdd.n0 0.477721
+X33 a_4374_1878# a_1612_368# a_4186_1878# vdd.t3 pfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X34 a_1424_2016# a_1080_400# a_1080_400# vsubs.t6 nfet_03v3 ad=3.03p pd=7.2u as=3.03p ps=7.2u w=6u l=0.5u
+X35 OUTP a_1612_368# vdd.t9 vdd.t8 pfet_03v3 ad=6.015p pd=13.1u as=5.28p ps=24.88u w=12u l=0.5u
+X36 a_6130_2884# INP a_4374_1878# vdd.t0 pfet_03v3 ad=8.294p pd=37.56u as=7.92p ps=36.88u w=18u l=5u
+R0 vdd.t0 vdd.t8 721.385
+R1 vdd.t5 vdd.n3 542.768
+R2 vdd.t9 vdd.n0 0.477721
 R3 vdd.n0 vdd.n3 1.42911
-R4 vdd.n2 vdd.t5 3.51279
+R4 vdd.n2 vdd.t6 3.51279
 R5 vdd.n2 vdd.n1 3.3107
-R6 vdd.t5 vdd.t10 160.377
-R7 vdd.t3 vdd.t4 141.51
-R8 vdd.n2 vdd.t0 105.242
-R9 vdd.t9 vdd.t8 102.727
-R10 vdd.t0 vdd.t1 94.3401
-R11 vdd.t1 vdd.t2 94.3401
-R12 vdd.t2 vdd.t3 94.3401
-R13 vdd.t7 vdd.t9 94.3401
-R14 vdd.t6 vdd.n1 0.0128555
+R6 vdd.t6 vdd.t0 160.377
+R7 vdd.t4 vdd.t5 141.51
+R8 vdd.n2 vdd.t1 105.242
+R9 vdd.t10 vdd.t9 102.727
+R10 vdd.t1 vdd.t2 94.3401
+R11 vdd.t2 vdd.t3 94.3401
+R12 vdd.t3 vdd.t4 94.3401
+R13 vdd.t8 vdd.t10 94.3401
+R14 vdd.t7 vdd.n1 0.0128555
 R15 vdd vdd.n3 2.18881
-R16 vdd.t5 vdd.n0 1.21843
+R16 vdd.t6 vdd.n0 1.21843
 R17 vdd.n3 vdd.n1 1.08202
 R18 vsubs.n2 vsubs.n1 82671.9
 R19 vsubs.n3 vsubs.n1 82671.9
 R20 vsubs.n4 vsubs.n2 61546.9
 R21 vsubs.n3 vsubs.n4 61546.9
-R22 vsubs.t18 vsubs.t12 770.715
-R23 vsubs.n1 vsubs.t18 679.715
+R22 vsubs.t12 vsubs.t15 770.715
+R23 vsubs.n1 vsubs.t12 679.715
 R24 vsubs.n0 vsubs 2.65579
 R25 vsubs.n3 vsubs 597.101
-R26 vsubs.t6 vsubs.t4 557.144
-R27 vsubs.t4 vsubs.t3 417.858
-R28 vsubs.n4 vsubs.t6 360.286
-R29 vsubs.t0 vsubs.t10 354.714
-R30 vsubs.t1 vsubs.t0 278.572
-R31 vsubs.t2 vsubs.t1 278.572
-R32 vsubs.t3 vsubs.t2 278.572
-R33 vsubs.t12 vsubs.t14 278.572
-R34 vsubs.t14 vsubs.t16 278.572
-R35 vsubs.t16 vsubs.t17 278.572
-R36 vsubs.t9 vsubs 269.44
-R37 vsubs.t17 vsubs.t15 267.582
-R38 vsubs.t8 vsubs.t9 260
-R39 vsubs.t11 vsubs.t8 260
-R40 vsubs.t10 vsubs.t11 260
-R41 vsubs.n2 vsubs.t15 3.02004
+R26 vsubs.t9 vsubs.t7 557.144
+R27 vsubs.t7 vsubs.t6 417.858
+R28 vsubs.n4 vsubs.t9 360.286
+R29 vsubs.t3 vsubs.t11 354.714
+R30 vsubs.t4 vsubs.t3 278.572
+R31 vsubs.t5 vsubs.t4 278.572
+R32 vsubs.t6 vsubs.t5 278.572
+R33 vsubs.t15 vsubs.t16 278.572
+R34 vsubs.t16 vsubs.t18 278.572
+R35 vsubs.t18 vsubs.t19 278.572
+R36 vsubs.t1 vsubs 269.44
+R37 vsubs.t19 vsubs.t17 267.582
+R38 vsubs.t0 vsubs.t1 260
+R39 vsubs.t2 vsubs.t0 260
+R40 vsubs.t11 vsubs.t2 260
+R41 vsubs.n2 vsubs.t17 3.02004
 R42 vsubs.n3 vsubs.t13 2.97883
-R43 vsubs.t7 vsubs.n0 0.0103098
-R44 vsubs.t5 vsubs.n3 2.37129
-R45 vsubs vsubs.t5 2.18407
+R43 vsubs.t10 vsubs.n0 0.0103098
+R44 vsubs.t8 vsubs.n3 2.37129
+R45 vsubs vsubs.t8 2.18407
 R46 vsubs.n2 vsubs.n0 2.07832
-R47 vsubs.t13 vsubs.t15 1.16105
-C0 vdd a_4186_1878# 1.56751f
-C1 INP vdd 1.84875f
-C2 INN vdd 2.08589f
-C3 a_4186_1878# a_1080_400# 0
-C4 a_6130_2884# a_1612_368# 1.20836f
-C5 a_800_2922# a_240_2922# 0.06564f
-C6 OUTP a_1612_368# 0.96476f
-C7 a_1612_368# a_1424_2016# 0.71887f
-C8 a_1612_368# a_1424_368# 2.27244f
-C9 a_6130_2884# a_4186_430# 0.09484f
-C10 OUTP a_4186_430# 0.09929f
-C11 vdd a_520_400# 0.0937f
-C12 a_1424_368# a_4186_430# 0.00137f
-C13 a_6130_2884# vdd 5.57783f
-C14 a_4374_1878# a_1612_368# 1.50907f
-C15 INP a_6130_536# 0.01058f
-C16 a_1080_400# a_520_400# 0.07233f
-C17 INN a_6130_536# 1.05475f
-C18 OUTP vdd 3.96052f
-C19 vdd a_1424_2016# 0.56148f
-C20 a_1080_400# a_1424_2016# 4.5475f
-C21 vdd a_1424_368# 0.34118f
-C22 a_4374_1878# a_4186_430# 0.02895f
-C23 INP a_4186_1878# 0.02072f
-C24 a_800_2922# a_1424_2016# 0.07166f
-C25 a_1424_368# a_1080_400# 1.66376f
-C26 INP INN 0.09031f
-C27 a_4374_1878# vdd 2.37732f
-C28 a_6130_2884# a_6130_536# 0.93329f
-C29 a_4374_1878# a_1080_400# 0
-C30 OUTP a_6130_536# 2.38152f
-C31 a_1612_368# a_4186_430# 3.56144f
-C32 a_6130_2884# a_4186_1878# 0.14645f
-C33 INP a_6130_2884# 1.37837f
-C34 INN a_6130_2884# 0.12358f
-C35 OUTP a_4186_1878# 0.05205f
-C36 a_240_2922# a_1424_2016# 0.0036f
-C37 OUTP INP 1.15995f
-C38 a_1612_368# vdd 7.07798f
-C39 OUTP INN 1.34589f
-C40 a_4374_1878# a_6130_536# 0.1647f
-C41 a_1612_368# a_1080_400# 1.34038f
-C42 vdd a_4186_430# 1.93212f
-C43 a_4374_1878# a_4186_1878# 2.7956f
-C44 a_4186_430# a_1080_400# 0.00683f
-C45 INP a_4374_1878# 1.01326f
-C46 INN a_4374_1878# 0.8975f
-C47 OUTP a_6130_2884# 6.79671f
-C48 vdd a_1080_400# 0.23759f
-C49 a_1612_368# a_6130_536# 0.06012f
-C50 a_800_2922# a_1080_400# 0.00522f
-C51 a_1424_368# a_1424_2016# 0.00526f
-C52 a_1612_368# a_4186_1878# 1.60167f
-C53 a_6130_536# a_4186_430# 0.00418f
-C54 INP a_1612_368# 0.26401f
-C55 INN a_1612_368# 0.02481f
-C56 a_6130_2884# a_4374_1878# 0.47049f
-C57 OUTP a_4374_1878# 1.31827f
-C58 a_4186_1878# a_4186_430# 0.02111f
-C59 a_6130_536# vdd 4.80044f
-C60 INN a_4186_430# 0.01705f
+R47 vsubs.t13 vsubs.t17 1.16105
+C0 INN a_4374_1878# 0.8975f
+C1 OUTP a_6130_2884# 6.79671f
+C2 vdd a_1080_400# 0.23759f
+C3 a_1612_368# a_6130_536# 0.06012f
+C4 a_800_2922# a_1080_400# 0.00522f
+C5 a_1424_368# a_1424_2016# 0.00526f
+C6 a_1612_368# a_4186_1878# 1.60167f
+C7 a_6130_536# a_4186_430# 0.00418f
+C8 INP a_1612_368# 0.26401f
+C9 INN a_1612_368# 0.02481f
+C10 a_6130_2884# a_4374_1878# 0.47049f
+C11 OUTP a_4374_1878# 1.31827f
+C12 a_4186_1878# a_4186_430# 0.02111f
+C13 a_6130_536# vdd 4.80044f
+C14 INN a_4186_430# 0.01705f
+C15 vdd a_4186_1878# 1.56751f
+C16 INP vdd 1.84875f
+C17 INN vdd 2.08589f
+C18 a_4186_1878# a_1080_400# 0
+C19 a_6130_2884# a_1612_368# 1.20836f
+C20 a_800_2922# a_240_2922# 0.06564f
+C21 OUTP a_1612_368# 0.96476f
+C22 a_1612_368# a_1424_2016# 0.71887f
+C23 a_1612_368# a_1424_368# 2.27244f
+C24 a_6130_2884# a_4186_430# 0.09484f
+C25 OUTP a_4186_430# 0.09929f
+C26 vdd a_520_400# 0.0937f
+C27 a_1424_368# a_4186_430# 0.00137f
+C28 a_6130_2884# vdd 5.57783f
+C29 a_4374_1878# a_1612_368# 1.50907f
+C30 INP a_6130_536# 0.01058f
+C31 a_1080_400# a_520_400# 0.07233f
+C32 INN a_6130_536# 1.05475f
+C33 OUTP vdd 3.96052f
+C34 vdd a_1424_2016# 0.56148f
+C35 a_1080_400# a_1424_2016# 4.5475f
+C36 vdd a_1424_368# 0.34118f
+C37 a_4374_1878# a_4186_430# 0.02895f
+C38 INP a_4186_1878# 0.02072f
+C39 a_800_2922# a_1424_2016# 0.07166f
+C40 a_1424_368# a_1080_400# 1.66376f
+C41 INP INN 0.09031f
+C42 a_4374_1878# vdd 2.37732f
+C43 a_6130_2884# a_6130_536# 0.93329f
+C44 a_4374_1878# a_1080_400# 0
+C45 OUTP a_6130_536# 2.38152f
+C46 a_1612_368# a_4186_430# 3.56144f
+C47 a_6130_2884# a_4186_1878# 0.14645f
+C48 INP a_6130_2884# 1.37837f
+C49 INN a_6130_2884# 0.12358f
+C50 OUTP a_4186_1878# 0.05205f
+C51 a_240_2922# a_1424_2016# 0.0036f
+C52 OUTP INP 1.15995f
+C53 a_1612_368# vdd 7.07798f
+C54 OUTP INN 1.34589f
+C55 a_4374_1878# a_6130_536# 0.1647f
+C56 a_1612_368# a_1080_400# 1.34038f
+C57 vdd a_4186_430# 1.93212f
+C58 a_4374_1878# a_4186_1878# 2.7956f
+C59 a_4186_430# a_1080_400# 0.00683f
+C60 INP a_4374_1878# 1.01326f
 C61 vdd vsubs 88.00769f
 C62 a_6130_536# vsubs 0.05846f
 C63 a_4186_430# vsubs 0.05612f
@@ -158,20 +158,20 @@ C68 a_800_2922# vsubs 0.82448f
 C69 a_520_400# vsubs 0.81216f
 C70 a_240_2922# vsubs 0.90259f
 C71 a_1424_2016# vsubs 5.19732f
-C72 vsubs.t15 vsubs 6.89972f
+C72 vsubs.t17 vsubs 6.89972f
 C73 vsubs.t13 vsubs 1.65398f
-C74 vdd.t5 vsubs 2.42844f
-C75 vdd.t8 vsubs 4.81522f
+C74 vdd.t6 vsubs 2.42844f
+C75 vdd.t9 vsubs 4.81523f
 C76 vdd.n2 vsubs 1.50545f
 C77 vdd.n3 vsubs 6.31603f
-C78 vdd.t6 vsubs 0.59469f
-C79 vdd.t9 vsubs 0.97968f
-C80 vdd.t7 vsubs 4.05131f
-C81 vdd.t10 vsubs 4.37928f
-C82 vdd.t4 vsubs 3.39847f
-C83 vdd.t3 vsubs 1.17135f
-C84 vdd.t2 vsubs 0.93708f
-C85 vdd.t1 vsubs 0.93708f
-C86 vdd.t0 vsubs 0.99178f
+C78 vdd.t7 vsubs 0.59469f
+C79 vdd.t10 vsubs 0.97968f
+C80 vdd.t8 vsubs 4.05131f
+C81 vdd.t0 vsubs 4.37928f
+C82 vdd.t5 vsubs 3.39847f
+C83 vdd.t4 vsubs 1.17135f
+C84 vdd.t3 vsubs 0.93708f
+C85 vdd.t2 vsubs 0.93708f
+C86 vdd.t1 vsubs 0.99178f
 .ends
 

@@ -1,4 +1,4 @@
-** sch_path: /home/nixos/projects/ws-openschnapp-1x1/xschem/ip_current_source.sch
+** sch_path: /home/nixos/projects/ws-openschnapp-1x1/analog/xschem/ip_current_source.sch
 .subckt ip_current_source vdd src_a vsubs src_b
 *.PININFO vdd:B vsubs:B src_a:I src_b:I
 XM8 refin refin vsubs vsubs nfet_06v0 L=1u W=5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'

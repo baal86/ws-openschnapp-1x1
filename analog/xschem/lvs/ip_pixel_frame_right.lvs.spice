@@ -1,4 +1,4 @@
-** sch_path: /home/nixos/projects/ws-openschnapp-1x1/xschem/ip_pixel_frame_right.sch
+** sch_path: /home/nixos/projects/ws-openschnapp-1x1/analog/xschem/ip_pixel_frame_right.sch
 .subckt ip_pixel_frame_right read reset vsubs vdd
 *.PININFO read:I reset:I vsubs:B vdd:B
 D1 vsubs reset diode_nd2ps_06v0 area='0.5u * 0.5u ' pj='2*0.5u + 2*0.5u ' m=1

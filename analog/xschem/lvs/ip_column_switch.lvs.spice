@@ -1,4 +1,4 @@
-** sch_path: /home/nixos/projects/ws-openschnapp-1x1/xschem/ip_column_switch.sch
+** sch_path: /home/nixos/projects/ws-openschnapp-1x1/analog/xschem/ip_column_switch.sch
 .subckt ip_column_switch cl bus en vsubs
 *.PININFO cl:I en:I vsubs:B bus:O
 XM1 cl en bus vsubs nfet_06v0 L=0.7u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'

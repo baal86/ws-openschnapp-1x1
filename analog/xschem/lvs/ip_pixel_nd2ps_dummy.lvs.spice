@@ -1,4 +1,4 @@
-** sch_path: /home/nixos/projects/ws-openschnapp-1x1/xschem/ip_pixel_nd2ps_dummy.sch
+** sch_path: /home/nixos/projects/ws-openschnapp-1x1/analog/xschem/ip_pixel_nd2ps_dummy.sch
 .subckt ip_pixel_nd2ps_dummy vdd reset read vsubs cl
 *.PININFO vdd:B vsubs:B reset:I read:I cl:O
 D2 vsubs siminj diode_nd2ps_06v0 area=0.16125n pj='2*13.5u + 2*13.5u ' m=1

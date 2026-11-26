@@ -1,11 +1,12 @@
-# Resolve PDK_ROOT from environment, or fall back to ../gf180mcu relative to this file
+# Resolve PDK_ROOT from environment, or fall back to ../../gf180mcu
 if {![info exists env(PDK_ROOT)]} {
-    set env(PDK_ROOT) [file normalize [file join [file dirname [info script]] .. gf180mcu]]
+    set env(PDK_ROOT) [file normalize [file join [file dirname [info script]] ../.. gf180mcu]]
 }
 
 if {![info exists env(PDK)]} {
     set env(PDK) gf180mcuD
 }
+
 
 # Source the GF180MCU Magic startup script
 source $env(PDK_ROOT)/$env(PDK)/libs.tech/magic/$env(PDK).magicrc

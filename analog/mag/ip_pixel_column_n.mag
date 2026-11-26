@@ -1,6 +1,13 @@
 magic
 tech gf180mcuD
-timestamp 1795696555
+timestamp 1795700024
+<< error_p >>
+rect 2750 19570 2752 19575
+rect 2756 19559 2757 19570
+use ip_current_source  ip_current_source_0
+timestamp 1790325955
+transform 1 0 -160 0 1 19220
+box 160 180 440 530
 use ip_pixel_block  ip_pixel_block_0
 timestamp 1795695846
 transform 1 0 1000 0 1 -400
@@ -9,4 +16,12 @@ use ip_pixel_block  ip_pixel_block_1
 timestamp 1795695846
 transform 1 0 1000 0 1 9200
 box -1000 400 8600 10000
+use ip_pixel_nd2ps_dummy  ip_pixel_nd2ps_dummy_0
+timestamp 1790325955
+transform 1 0 520 0 1 19600
+box 80 -200 380 100
+use ip_sigproc  ip_sigproc_0
+timestamp 1795698877
+transform 1 0 1400 0 1 19400
+box 0 0 3380 350
 << end >>

@@ -78,19 +78,28 @@ MACROS:
         location: [26, "expr::$DIE_AREA[3] - 169.25"]
         orientation: N
 
-  ip_pixel_nd2ps:
+  ip_pixel_column_n:
     gds:
-      - dir::../analog/gds/ip_pixel_nd2ps.mag.gds
+      - dir::../analog/gds/ip_pixel_column_n.mag.gds
     lef:
-      - dir::../analog/lef/ip_pixel_nd2ps.mag.lef
+      - dir::../analog/lef/ip_pixel_column_n.mag.lef
     vh:
-      - dir::../analog/src/ip_pixel_nd2ps.v
+      - dir::../analog/src/ip_pixel_column_n.v
     instances:
-      i_chip_core.u_pixel:
+      i_chip_core.u_pixel_tl :
         location: [1000, 1000]
+        orientation: N
+      i_chip_core.u_pixel_tr :
+        location: [1480, 1000]
+        orientation: N
+      i_chip_core.u_pixel_bl :
+        location: [1000, 2500]
+        orientation: N
+      i_chip_core.u_pixel_br :
+        location: [1480, 2500]
         orientation: N
 
 # This is an alternative method compared to
 # specifying the power connections in the RTL
-PDN_MACRO_CONNECTIONS:
-- "i_chip_core.u_pixel VDD VSS VDD VSS"
+#PDN_MACRO_CONNECTIONS:
+#- "i_chip_core.u_pixel VDD VSS VDD VSS"

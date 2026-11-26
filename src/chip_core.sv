@@ -62,14 +62,19 @@ module chip_core #(
     wire pixel_read;
 
     (* keep *)
-    ip_pixel_nd2ps u_pixel (
-        `ifdef USE_POWER_PINS
-        .vdd   (VDD),
-        .vsubs (VSS),
-        `endif
-        .reset ('0),
-        .cl    ('0),
-        .read  (pixel_read)
+    ip_pixel_column_n u_pixel_tl (
+    );
+
+    (* keep *)
+    ip_pixel_column_n u_pixel_tr (
+    );
+
+    (* keep *)
+    ip_pixel_column_n u_pixel_bl (
+    );
+
+    (* keep *)
+    ip_pixel_column_n u_pixel_br (
     );
 
 endmodule

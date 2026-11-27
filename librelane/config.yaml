@@ -295,6 +295,7 @@ MACROS:
       i_chip_core.u_pixel_c1 :
         location: [500, 3880]
         orientation: N
+        
 
 
 # This is an alternative method compared to

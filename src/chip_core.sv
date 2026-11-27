@@ -93,6 +93,22 @@ module chip_core #(
     ip_pixel_column_w u_pixel_c8 (
     );
 
+    wire [31:0]  col_pix_rst;
+    wire [159:0] row_sel;
+    wire [31:0]  col_sel;
+
+    (* keep *)
+    cis_ctrl ctrl (
+        .clk_i     (clk),
+        .pix_rst_i (input_in[0]),
+        .cnt_rst_i (input_in[1]),
+        .row_adv_i (input_in[2]),
+        .col_adv_i (input_in[3]),
+        .pix_rst_o (col_pix_rst),
+        .row_sel_o (row_sel),
+        .col_sel_o (col_sel)
+    );
+
 
 
 endmodule

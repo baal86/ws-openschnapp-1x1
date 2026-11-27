@@ -309,3 +309,6 @@ PDN_MACRO_CONNECTIONS:
 - "i_chip_core.u_pixel_c6 VDD VSS VDD VSS"
 - "i_chip_core.u_pixel_c7 VDD VSS VDD VSS"
 - "i_chip_core.u_pixel_c8 VDD VSS VDD VSS"
+
+
+RSZ_DONT_TOUCH_RX: "^(.*analog_PAD\\[.*\\]|.*analog\\[.*\\]|.*u_pixel_c.*)$"

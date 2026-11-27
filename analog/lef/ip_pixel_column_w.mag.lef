@@ -8,7 +8,7 @@ MACRO ip_pixel_column_w
   ORIGIN 0.000 0.000 ;
   SIZE 2420.000 BY 480.000 ;
   PIN VSS
-    USE GROUND ;
+    USE POWER ;
     PORT
       LAYER Metal4 ;
         RECT -5.000 235.000 10.000 335.000 ;
@@ -22,8 +22,10 @@ MACRO ip_pixel_column_w
     END
   END VDD
   PIN sf_out
+    DIRECTION INOUT ;
+    USE SIGNAL ;
     PORT
-      LAYER Metal1 ;
+      LAYER Metal2 ;
         RECT 0.000 20.000 10.000 25.000 ;
     END
   END sf_out
@@ -34,14 +36,14 @@ MACRO ip_pixel_column_w
         RECT -5.000 340.000 2420.000 480.000 ;
         RECT 0.000 335.000 2420.000 340.000 ;
         RECT -5.000 235.000 2420.000 335.000 ;
-        RECT 0.000 25.300 2420.000 235.000 ;
-        RECT 10.300 19.700 2420.000 25.300 ;
-        RECT 0.000 0.000 2420.000 19.700 ;
+        RECT 0.000 0.000 2420.000 235.000 ;
       LAYER Metal2 ;
         RECT -5.000 340.000 2420.000 480.000 ;
         RECT 0.000 335.000 2420.000 340.000 ;
         RECT -5.000 235.000 2420.000 335.000 ;
-        RECT 0.000 0.000 2420.000 235.000 ;
+        RECT 0.000 25.300 2420.000 235.000 ;
+        RECT 10.300 19.700 2420.000 25.300 ;
+        RECT 0.000 0.000 2420.000 19.700 ;
       LAYER Metal3 ;
         RECT -5.000 340.000 2420.000 480.000 ;
         RECT 0.000 335.000 2420.000 340.000 ;

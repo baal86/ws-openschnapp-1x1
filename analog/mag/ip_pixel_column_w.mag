@@ -1,6 +1,6 @@
 magic
 tech gf180mcuD
-timestamp 1795782376
+timestamp 1795786210
 << error_s >>
 rect 347 4363 348 4367
 rect 347 4063 348 4067
@@ -20,10 +20,14 @@ rect -100 6600 200 6700
 rect -100 4800 0 6600
 rect 100 4800 200 6600
 rect -100 4700 200 4800
-rect 0 400 200 500
+rect 0 480 200 500
+rect 0 420 20 480
+rect 180 420 200 480
+rect 0 400 200 420
 << via1 >>
 rect 0 6900 100 9500
 rect 0 4800 100 6600
+rect 20 420 180 480
 << metal2 >>
 rect -100 9500 200 9600
 rect -100 6900 0 9500
@@ -33,6 +37,10 @@ rect -100 6600 200 6700
 rect -100 4800 0 6600
 rect 100 4800 200 6600
 rect -100 4700 200 4800
+rect 0 480 200 500
+rect 0 420 20 480
+rect 180 420 200 480
+rect 0 400 200 420
 << via2 >>
 rect 0 6900 100 9500
 rect 0 4800 100 6600
@@ -222,8 +230,8 @@ flabel metal4 s -100 4700 200 6700 0 FreeSans 2400 0 0 0 VSS
 port 1 nsew power default
 flabel metal4 s -100 6800 200 9600 0 FreeSans 2400 0 0 0 VDD
 port 2 nsew power default
-flabel metal1 s 0 400 200 500 0 FreeSans 800 0 0 0 sf_out
-port 3 nsew analog default
+flabel metal2 s 0 400 200 500 0 FreeSans 800 0 0 0 sf_out
+port 3 nsew signal bidirectional
 << properties >>
 string FIXED_BBOX 0 0 48400 9600
 << end >>

@@ -1,9 +1,55 @@
 magic
 tech gf180mcuD
-timestamp 1795707879
+timestamp 1795775894
 << error_p >>
 rect 170 3228 175 3229
 rect 159 3222 170 3224
+<< metal1 >>
+rect -100 9500 200 9600
+rect -100 6900 0 9500
+rect 100 6900 200 9500
+rect -100 6800 200 6900
+rect -100 6600 200 6700
+rect -100 4800 0 6600
+rect 100 4800 200 6600
+rect -100 4700 200 4800
+rect 0 400 200 500
+<< via1 >>
+rect 0 6900 100 9500
+rect 0 4800 100 6600
+<< metal2 >>
+rect -100 9500 200 9600
+rect -100 6900 0 9500
+rect 100 6900 200 9500
+rect -100 6800 200 6900
+rect -100 6600 200 6700
+rect -100 4800 0 6600
+rect 100 4800 200 6600
+rect -100 4700 200 4800
+<< via2 >>
+rect 0 6900 100 9500
+rect 0 4800 100 6600
+<< metal3 >>
+rect -100 9500 200 9600
+rect -100 6900 0 9500
+rect 100 6900 200 9500
+rect -100 6800 200 6900
+rect -100 6600 200 6700
+rect -100 4800 0 6600
+rect 100 4800 200 6600
+rect -100 4700 200 4800
+<< via3 >>
+rect 0 6900 100 9500
+rect 0 4800 100 6600
+<< metal4 >>
+rect -100 9500 200 9600
+rect -100 6900 0 9500
+rect 100 6900 200 9500
+rect -100 6800 200 6900
+rect -100 6600 200 6700
+rect -100 4800 0 6600
+rect 100 4800 200 6600
+rect -100 4700 200 4800
 use ip_column_switch  ip_column_switch_1
 timestamp 1790327709
 transform 0 -1 430 1 0 0
@@ -40,6 +86,13 @@ use ip_sigproc  ip_sigproc_0
 timestamp 1795698877
 transform 0 1 0 -1 0 4580
 box 0 0 3380 350
+<< labels >>
+flabel metal4 s -100 4700 200 6700 0 FreeSans 2400 0 0 0 VSS
+port 1 nsew
+flabel metal4 s -100 6800 200 9600 0 FreeSans 2400 0 0 0 VDD
+port 2 nsew
+flabel metal1 s 0 400 200 500 0 FreeSans 800 0 0 0 sf_out
+port 3 nsew
 << properties >>
 string FIXED_BBOX 0 0 48400 9600
 << end >>

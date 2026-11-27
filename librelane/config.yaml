@@ -299,5 +299,12 @@ MACROS:
 
 # This is an alternative method compared to
 # specifying the power connections in the RTL
-#PDN_MACRO_CONNECTIONS:
-#- "i_chip_core.u_pixel VDD VSS VDD VSS"
+PDN_MACRO_CONNECTIONS:
+- "i_chip_core.u_pixel_c1 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c2 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c3 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c4 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c5 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c6 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c7 VDD VSS VDD VSS"
+- "i_chip_core.u_pixel_c8 VDD VSS VDD VSS"

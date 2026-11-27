@@ -63,34 +63,42 @@ module chip_core #(
 
     (* keep *)
     ip_pixel_column_w u_pixel_c1 (
+        .sf_out(analog[0])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c2 (
+        .sf_out(analog[1])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c3 (
+        .sf_out(analog[2])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c4 (
+        .sf_out(analog[3])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c5 (
+        .sf_out(analog[4])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c6 (
+        .sf_out(analog[5])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c7 (
+        .sf_out(analog[6])
     );
 
     (* keep *)
     ip_pixel_column_w u_pixel_c8 (
+        .sf_out(analog[7])
     );
 
     wire [31:0]  col_pix_rst;

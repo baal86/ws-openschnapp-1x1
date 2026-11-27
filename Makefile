@@ -38,12 +38,6 @@ ifeq ($(SRAM),default)
 endif
 SRAM ?= gf180mcu_fd_ip_sram
 
-ifeq ($(SRAM),gf180mcu_fd_ip_sram)
-    MACROS = 5v
-else
-    MACROS = 3v3
-endif
-
 AVAILABLE_SLOTS = 1x1 0p5x1 1x0p5 0p5x0p5
 DEFAULT_SLOT = 1x1
 
@@ -62,7 +56,7 @@ SLOT_DEFINE = SLOT_$(shell echo $(SLOT) | tr '[:lower:]' '[:upper:]')
 SRAM_DEFINE = SRAM_$(SRAM)
 
 LIBRELANE_OPTS = --pdk ${PDK} --pdk-root ${PDK_ROOT} --manual-pdk --scl ${SCL} --pad ${PAD}
-LIBRELANE_CONFIGS = librelane/slots/slot_${SLOT}.yaml librelane/macros/macros_${MACROS}.yaml librelane/config.yaml
+LIBRELANE_CONFIGS = librelane/slots/slot_${SLOT}.yaml librelane/config.yaml
 
 .DEFAULT_GOAL := help
 

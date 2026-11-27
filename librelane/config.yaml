@@ -273,30 +273,30 @@ MACROS:
       - dir::../analog/src/ip_pixel_column_w.v
     instances:
       i_chip_core.u_pixel_c8 :
-        location: [500, 520]
+        location: [450, 520]
         orientation: N
       i_chip_core.u_pixel_c7 :
-        location: [500, 1000]
+        location: [450, 1000]
         orientation: N
       i_chip_core.u_pixel_c6 :
-        location: [500, 1480]
+        location: [450, 1480]
         orientation: N
       i_chip_core.u_pixel_c5 :
-        location: [500, 1960]
+        location: [450, 1960]
         orientation: N
       i_chip_core.u_pixel_c4 :
-        location: [500, 2440]
+        location: [450, 2440]
         orientation: N
       i_chip_core.u_pixel_c3 :
-        location: [500, 2920]
+        location: [450, 2920]
         orientation: N
       i_chip_core.u_pixel_c2 :
-        location: [500, 3400]
+        location: [450, 3400]
         orientation: N
       i_chip_core.u_pixel_c1 :
-        location: [500, 3880]
+        location: [450, 3880]
         orientation: N
-    
+
   analog_routing:
       gds:
         - dir::../analog/gds/analog_routing.mag.gds
@@ -306,7 +306,7 @@ MACROS:
         i_chip_core.u_route:
           location: [0.0, 0.0]
           orientation: N
-    
+
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:

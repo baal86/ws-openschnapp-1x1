@@ -89,10 +89,13 @@ box 0 0 3380 350
 << labels >>
 flabel metal4 s -100 4700 200 6700 0 FreeSans 2400 0 0 0 VSS
 port 1 nsew
+port use power
 flabel metal4 s -100 6800 200 9600 0 FreeSans 2400 0 0 0 VDD
 port 2 nsew
+port use power
 flabel metal1 s 0 400 200 500 0 FreeSans 800 0 0 0 sf_out
 port 3 nsew
+port use signal
 << properties >>
 string FIXED_BBOX 0 0 48400 9600
 << end >>

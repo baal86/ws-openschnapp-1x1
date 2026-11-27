@@ -1,0 +1,11 @@
+magic
+tech gf180mcuD
+timestamp 1795791729
+<< metal2 >>
+rect 7500 27600 7600 28500
+rect 7500 27500 9000 27600
+rect 8900 20500 9000 27500
+rect 8900 20400 10200 20500
+<< properties >>
+string FIXED_BBOX 0 0 78640 102440
+<< end >>

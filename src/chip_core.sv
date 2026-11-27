@@ -117,7 +117,9 @@ module chip_core #(
         .col_sel_o (col_sel)
     );
 
-
+    (* keep *)
+    analog_routing u_route (
+    );
 
 endmodule
 

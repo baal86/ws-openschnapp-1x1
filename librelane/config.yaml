@@ -34,6 +34,7 @@ VERILOG_FILES:
 - dir::../src/chip_core.sv
 - dir::../src/cis_ctrl.v
 - dir::../analog/src/ip_pixel_column_w.v
+- dir::../analog/src/analog_routing.v
 
 # Enable plugin for better SystemVerilog support
 # USE_SLANG: True
@@ -295,9 +296,17 @@ MACROS:
       i_chip_core.u_pixel_c1 :
         location: [500, 3880]
         orientation: N
-        
-
-
+    
+  analog_routing:
+      gds:
+        - dir::../analog/gds/analog_routing.mag.gds
+      lef:
+        - dir::../analog/lef/analog_routing.mag.lef
+      instances:
+        i_chip_core.u_route:
+          location: [0.0, 0.0]
+          orientation: N
+    
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 PDN_MACRO_CONNECTIONS:
@@ -309,6 +318,3 @@ PDN_MACRO_CONNECTIONS:
 - "i_chip_core.u_pixel_c6 VDD VSS VDD VSS"
 - "i_chip_core.u_pixel_c7 VDD VSS VDD VSS"
 - "i_chip_core.u_pixel_c8 VDD VSS VDD VSS"
-
-
-RSZ_DONT_TOUCH_RX: "^(.*analog_PAD\\[.*\\]|.*analog\\[.*\\]|.*u_pixel_c.*)$"
